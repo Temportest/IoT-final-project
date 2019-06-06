@@ -1,28 +1,159 @@
 <!DOCTYPE html>
-<html>
-<meta charset="utf-8">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="Dashboard">
+  <meta property="og:title" content="Dashboard">
+  <meta property="og:description" content="Dashboard">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./image/favicon.ico">
+  <title>Dashboard</title>
+  <link rel="shortcut icon" href="./image/favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/accordion.css">
+  <link rel="stylesheet" href="./css/move-top.css">
+</head>
 
 <body>
+  <div class="site-container">
+    <div class="site-pusher">
+      <!-- Navigation bar -->
+      <header class="header">
+        <a href="#" class="header__icon" id="header__icon" onclick="onMenu()"></a>
+        <!-- if center logo => d-flex justify-content-center -->
+        <div class="pt-3"><a href="#" class="header__logo">
+            <h4>Dashboard</h4>
+          </a></div>
+        <div class="justify-content-center align-items-center text-right">
+          <!-- Dropdown -->
+          <div class="nav-item dropdown" id="toggle" expanded="true" style="display:inline-block">
+            <a class="nav-link p-0 px-4" href="#" id="navbardrop" data-toggle="dropdown">
+              <span><img class="user mx-2" src="./image/user.jpg" alt="" srcset=""></span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right mt-2" id="dropdown">
+              <a class="dropdown-item" href="javascript:void(0)" onclick="call()">
+                <i class="fas fa-cog fa-fw"></i> Setting
+              </a>
+              <a class="dropdown-item" href="./password.html">
+                <i class="fa fa-key fa-fw"></i>
+                Modify Password
+              </a>
+              <a class="dropdown-item" href="">
+                <i class="fa fa-upload fa-fw"></i>
+                Upload
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="javascritp: return false;" onclick="logout()">
+                <i class="fas fa-sign-out-alt fa-fw"></i>
+                Logout
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="menu">
+          <div class="item">
+            <a href="#"><i class="far fa-address-card"></i> 關 於</a>
+          </div>
+          <div class="item">
+            <a href="#"><i class="far fa-handshake"></i> 服 務 內 容</a>
+          </div>
+          <div class="item">
+            <div class="ml-2"><i class="fas fa-box-open"></i> 所 有 產 品</div>
+            <div class="ml-3"><a href="" style="font-size:13px;">產品 1</a></div>
+            <div class="ml-3"><a href="" style="font-size:13px;">產品 2</a></div>
+          </div>
+          <div class="item">
+            <a href="#"><i class="fas fa-shipping-fast"></i> 服 務 流 程</a>
+          </div>
+          <div class="item">
+            <a href=""><i class="far fa-id-card"></i> 聯 絡 我 們</a>
+          </div>
 
-  <button onclick="getLocation()">取得您目前所在位置的經緯度</button>
+          <div class="fixed-bottom p-2"><a href="" style="font-size:15px;"><i class="fab fa-github-square fa-2x"></i>
+              Dashboard 2019.</a></div>
+        </nav>
+      </header>
 
-  <p id="msg"></p>
+      <!-- Context 內容 -->
+      <div class="container" style="height: 1000px">
+        <!-- GPS Map -->
+        <div class="line_chart row justify-content-center align-items-center text-center py-3 my-4">
+          <div class="col-12">
+            <h4></h4>
+          </div>
+          <div class="col-12 align-self-center">
+            
+          </div>
+        </div>
 
-  <script>
-    var m = document.getElementById("msg");
+        <!-- accordion -->
+        <div class="accordion accordion row justify-content-between align-items-center text-center">
+          <dl>
+            <dt><a class="accordionTitle p-4" href="#">Test Simple Flat UI CSS Accordion 1</a></dt>
+            <dd class="accordionItem accordionItemCollapsed">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum
+                porttitor risus
+                non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec
+                lobortis ut,
+                iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim
+                sit amet
+                varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+            </dd>
+          </dl>
+        </div>
+      </div><!-- END context -->
 
-    function getLocation() {//取得 經緯度
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);//有拿到位置就呼叫 showPosition 函式
-      } else {
-        m.innerHTML = "您的瀏覽器不支援 顯示地理位置 API ，請使用其它瀏覽器開啟 這個網址";
-      }
-    }
 
-    function showPosition(position) {
-      m.innerHTML = "  緯度 (Latitude): " + position.coords.latitude +
-        "<br>經度 (Longitude): " + position.coords.longitude;
-    }
-  </script>
+      <div class="site-cache" id="site-cache" onclick="offMenu()"></div>
+    </div> <!-- END site-pusher -->
+  </div> <!-- END site-container -->
+  <!-- Modal start -->
+  <div id="static-modal" class="modal fade" tabindex="-1" role="dialog" style="display: none; padding-right: 0px;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> -->
+          <h4 class="modal-title">Setting</h4>
+        </div>
+        <div class="modal-body">
+          <div class="my-2">
+            IP Address: <input id="ipInput" type="text" value="127.0.0.1"><br />
+          </div>
+          <div class="my-2">
+            PORT: <input id="portInput" type="text" value="5000"><br />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="buttonOK()">OK</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <!-- Modal end -->
+  <!-- Scroll to top -->
+  <p class="cd-top text--replace js-cd-top" id="back-top">
+    <a href="#"><span></span></a>
+  </p>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/accordion.js"></script>
+  <script src="./js/util.js"></script>
+  <script src="./js/moveTop.js"></script>
+  <script src="./js/modal.min.js"></script>
+</body>
 
 </html>
