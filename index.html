@@ -17,10 +17,13 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="./css/accordion.css">
   <link rel="stylesheet" href="./css/move-top.css">
+
+  
 </head>
 
 <body>
@@ -87,12 +90,13 @@
       <!-- Context 內容 -->
       <div class="container" style="height: 1000px">
         <!-- GPS Map -->
-        <div class="line_chart row justify-content-center align-items-center text-center py-3 my-4">
+        <div class="row justify-content-center align-items-center py-3 my-4">
           <div class="col-12">
-            <h4></h4>
+            <h4>GPS Map</h4>
           </div>
-          <div class="col-12 align-self-center">
-            
+          <div class="col-12">
+            <!-- Mapbox MAP -->
+            <div id='map'></div>
           </div>
         </div>
 
@@ -149,11 +153,15 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.js"></script>
+  <script src="./js/getData.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/accordion.js"></script>
   <script src="./js/util.js"></script>
   <script src="./js/moveTop.js"></script>
   <script src="./js/modal.min.js"></script>
+  <script src="./js/mapbox.js"></script>
 </body>
 
 </html>

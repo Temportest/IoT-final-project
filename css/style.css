@@ -14,6 +14,15 @@ body {
   /* zoom: 95%; */
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  max-width: 1500px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -138,4 +147,12 @@ a:hover{
 /* modal */
 .modal-content{
   color: #1b1b1b;
+}
+
+
+#map {
+  background: #fff;
+      height: 600px;
+      width: 100%;
+      z-index: 999;
 }
