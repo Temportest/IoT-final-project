@@ -156,3 +156,11 @@ a:hover{
       width: 100%;
       z-index: 999;
 }
+.map{
+  background: #29395b;
+}
+
+.line_area_chart{
+  background: #29395b;
+}
+

@@ -90,13 +90,26 @@
       <!-- Context 內容 -->
       <div class="container" style="height: 1000px">
         <!-- GPS Map -->
-        <div class="row justify-content-center align-items-center py-3 my-4">
+        <div class="map row justify-content-center align-items-center py-3 my-4">
           <div class="col-12">
-            <h4>GPS Map</h4>
+            <h3 class="text-center pb-3">GPS Map</h3>
           </div>
           <div class="col-12">
             <!-- Mapbox MAP -->
             <div id='map'></div>
+          </div>
+        </div>
+
+        <!-- GPS Map -->
+        <div class="line_area_chart row justify-content-between align-items-center text-center py-3 my-4">
+          <div class="col-12">
+            <h3>GPS Map</h3>
+          </div>
+          <div class="col-12">
+            <!-- Line area chart -->
+            <div style="width:75%;margin: 0 auto">
+              <canvas id="canvas"></canvas>
+            </div>
           </div>
         </div>
 
@@ -155,6 +168,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
   <script src="./js/getData.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/accordion.js"></script>
@@ -162,6 +176,7 @@
   <script src="./js/moveTop.js"></script>
   <script src="./js/modal.min.js"></script>
   <script src="./js/mapbox.js"></script>
+  <script src="./js/lineAreaChart.js"></script>
 </body>
 
 </html>
