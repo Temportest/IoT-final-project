@@ -65,10 +65,10 @@
         </div>
         <nav class="menu">
           <div class="item">
-            <a href="#"><i class="far fa-address-card"></i> 關 於</a>
+            <a href="./gps.json" target="_blank"><i class="far fa-address-card"></i>GPS API資料</a>
           </div>
           <div class="item">
-            <a href="#"><i class="far fa-handshake"></i> 服 務 內 容</a>
+            <a href="./shake.json" target="_blank"><i class="far fa-handshake"></i>震動 API資料</a>
           </div>
           <div class="item">
             <div class="ml-2"><i class="fas fa-box-open"></i> 所 有 產 品</div>
@@ -100,7 +100,7 @@
           </div>
         </div>
 
-        <!-- GPS Map -->
+        <!-- Line area chart -->
         <div class="line_area_chart row justify-content-between align-items-center text-center py-3 my-4">
           <div class="col-12">
             <h3>GPS Map</h3>
@@ -110,6 +110,25 @@
             <div style="width:75%;margin: 0 auto">
               <canvas id="canvas" style="height:130px; width:300px"></canvas>
             </div>
+          </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="row justify-content-between align-items-center text-center my-4">
+          <!-- Radar Chart -->
+          <div class="pie-chart col-sm-12 col-md-7 pl-0 pr-lg-3 pr-sm-0">
+            <div class="pt-3  pb-1">
+              <h4>Pie Chart</h4>
+            </div>
+            <div id="chartContainer" class="mb-4" style="height: 370px;width: 100%;"></div>
+          </div>
+          <!-- Pie Chart -->
+          <div class="pie-chart col-sm-12 col-md-5 pr-0 pl-lg-3 pl-sm-0 pt-lg-0 pt-md-0 pt-sm-4" style="height: 450.7px;width: 100%;">
+            <div class="pt-3  pb-1">
+              <h4></h4>
+            </div>
+          sdfsdfs <br>
+          sdfsdf <br>
           </div>
         </div>
 
@@ -169,6 +188,7 @@
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script src="./js/getData.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/accordion.js"></script>
@@ -177,6 +197,7 @@
   <script src="./js/modal.min.js"></script>
   <script src="./js/mapbox.js"></script>
   <script src="./js/lineAreaChart.js"></script>
+  <script src="./js/pie-chart.js"></script>
 </body>
 
 </html>
