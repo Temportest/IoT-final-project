@@ -131,16 +131,7 @@ map.on('load', function () {
   map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
   map.addSource("points", {
     "type": "geojson",
-    "data": {
-      "type": "FeatureCollection",
-      "features": [{
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": pointOnCircle(0)
-        }
-      }]
-    }
+    "data": pointOnCircle(0)
   });
   map.addLayer({
     "id": "points",

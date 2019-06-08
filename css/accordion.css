@@ -67,7 +67,7 @@ h1 {
 }
 @media all {
   .accordionItem {
-    max-height: 150em;
+    /* max-height: 150em; */
     -moz-transition: max-height 1s;
     -o-transition: max-height 1s;
     -webkit-transition: max-height 1s;

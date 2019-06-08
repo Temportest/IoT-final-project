@@ -33,7 +33,12 @@ chart = new CanvasJS.Chart("chartContainer", {
     showInLegend: false
   }]
 });
-chart.render();
+function onScreen() {
+  if (window.pageYOffset>450){
+    chart.render();
+  }
+}
+
 
 function explodePie(e) {
   if (typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {

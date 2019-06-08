@@ -7,7 +7,7 @@ var config = {
     datasets: [{
       lineTension: 0,
       fill: 'origin',
-      label: "使用次數",
+      label: "震動次數",
       backgroundColor: 'rgba(99, 184, 255,.5)',
       borderColor: 'rgb(99, 184, 255)',
       data: shakeData,
