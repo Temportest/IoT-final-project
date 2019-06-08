@@ -3,7 +3,7 @@ var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11',
   center: [120.217134, 22.976278],
-  zoom: 18.3
+  zoom: 17.8
 });
 
 function pointOnCircle(index) {
