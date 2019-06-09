@@ -149,6 +149,15 @@ a:hover{
   color: #1b1b1b;
 }
 
+/* footer */
+.footer{
+  background-color: #001629;
+}
+a:hover{
+  color: #c5cae9;
+  text-decoration: none;
+}
+
 
 #map {
   background: #fff;

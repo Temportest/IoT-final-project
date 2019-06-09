@@ -47,48 +47,23 @@
               <a class="dropdown-item" href="javascript:void(0)" onclick="call()">
                 <i class="fas fa-cog fa-fw"></i> Setting
               </a>
-              <a class="dropdown-item" href="./password.html">
-                <i class="fa fa-key fa-fw"></i>
-                Modify Password
-              </a>
-              <a class="dropdown-item" href="">
-                <i class="fa fa-upload fa-fw"></i>
-                Upload
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="javascritp: return false;" onclick="logout()">
-                <i class="fas fa-sign-out-alt fa-fw"></i>
-                Logout
-              </a>
             </div>
           </div>
         </div>
         <nav class="menu">
           <div class="item">
-            <a href="./gps.json" target="_blank"><i class="far fa-address-card"></i>GPS API資料</a>
-          </div>
-          <div class="item">
-            <a href="./shake.json" target="_blank"><i class="far fa-handshake"></i>震動 API資料</a>
-          </div>
-          <div class="item">
-            <div class="ml-2"><i class="fas fa-box-open"></i> 所 有 產 品</div>
-            <div class="ml-3"><a href="" style="font-size:13px;">產品 1</a></div>
-            <div class="ml-3"><a href="" style="font-size:13px;">產品 2</a></div>
-          </div>
-          <div class="item">
-            <a href="#"><i class="fas fa-shipping-fast"></i> 服 務 流 程</a>
-          </div>
-          <div class="item">
-            <a href=""><i class="far fa-id-card"></i> 聯 絡 我 們</a>
+            <div class="ml-2"><i class="far fa-address-card"></i> 所 有 資 料</div>
+            <div class="ml-3"><a href="./gps.json" target="_blank" style="font-size:13px;">GPS API資料</a></div>
+            <div class="ml-3"><a href="./shake.json" target="_blank" style="font-size:13px;">震動 API資料</a></div>
           </div>
 
-          <div class="fixed-bottom p-2"><a href="" style="font-size:15px;"><i class="fab fa-github-square fa-2x"></i>
+          <div class="fixed-bottom p-2"><a href="https://github.com/andy6804tw" style="font-size:15px;"><i class="fab fa-github-square fa-2x"></i>
               Dashboard 2019.</a></div>
         </nav>
       </header>
 
       <!-- Context 內容 -->
-      <div class="container" style="height: 1000px">
+      <div class="container">
         <!-- GPS Map -->
         <div class="map row justify-content-center align-items-center py-3 my-4">
           <div class="col-12">
@@ -108,7 +83,7 @@
           <div class="col-12">
             <!-- Line area chart -->
             <div style="width:75%;margin: 0 auto">
-              <canvas id="canvas" style="height:130px; width:300px"></canvas>
+              <canvas id="canvas" style="width:75%;"></canvas>
             </div>
           </div>
         </div>
@@ -131,10 +106,21 @@
           </div>
         </div>
 
+        <!-- Demo video -->
+        <div class="map row justify-content-center align-items-center text-center py-3 my-4">
+          <div class="col-12">
+            <h3 class="text-center pb-3">Demo 影片</h3>
+          </div>
+          <div class="col-12">
+            <iframe width="900" height="500" src="https://www.youtube.com/embed/9pY0uXc8CCM" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+
         <!-- accordion -->
         <div class="accordion accordion row justify-content-between align-items-center text-center">
           <dl>
-            <dt><a class="accordionTitle p-4" href="#">Test Simple Flat UI CSS Accordion 1</a></dt>
+            <dt><a class="accordionTitle p-4" href="#">簡報</a></dt>
             <dd class="accordionItem accordionItemCollapsed">
               <img src="./image/slider/slider1.PNG" style="width: 80%" alt="" srcset="">
               <img src="./image/slider/slider2.PNG" style="width: 80%" alt="" srcset="">
@@ -150,18 +136,35 @@
               <img src="./image/slider/slider12.PNG" style="width: 80%" alt="" srcset="">
               <img src="./image/slider/slider13.PNG" style="width: 80%" alt="" srcset="">
               <img src="./image/slider/slider14.PNG" style="width: 80%" alt="" srcset="">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum
-                porttitor risus
-                non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec
-                lobortis ut,
-                iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim
-                sit amet
-                varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
+            
             </dd>
           </dl>
         </div>
       </div><!-- END context -->
-
+<!-- footer -->
+<div class="footer">
+  <!-- Visible only on lg and md  -->
+  <section class="container d-none d-xl-block d-lg-block d-md-block">
+    <div class="row justify-content-center align-items-top pt-5">
+      <div class="col-4 pr-5">
+        <img src="./image/index/footer-jhen-tai_logo.svg" style="width:100%;" alt="" srcset="">
+        <div class="footer-info mt-1">國立臺南大學 2019 物聯網課程 LoRa 應用期末專題實作 </div>
+      </div>
+      <div class="col-3 pl-4">
+        <div class="mb-2" style="font-size:16px;color:#fff;font-weight: 400;">參與人員</div>
+        <div class="footer-info">資工碩一 蔡易霖 M10759011</div>
+        <div class="footer-info">資工碩二 陳立中 M10659015</div>
+      </div>
+      <div class="col-2 pl-5">
+        <a href="https://sites.google.com/site/nutnoaselab/" class="footer-more">OASE Lab.</a><br>
+      </div>
+      <div class="col-12 my-4 text-center">
+        <div style="font-size:12px;color:#fff;font-weight: 300;">Copyright © 2019 by <a href="https://github.com/andy6804tw"><i class="fab fa-github"></i> andy6804tw</a> All Right
+          Reserverd <br> Last Updated: 2019/06/09</div>
+      </div>
+    </div>
+  </section>
+</div>
 
       <div class="site-cache" id="site-cache" onclick="offMenu()"></div>
     </div> <!-- END site-pusher -->
