@@ -12,7 +12,7 @@
 
 ![](./Screenshot/demo.gif)
 
-YouTube: https://www.youtube.com/watch?time_continue=158&v=9pY0uXc8CCM
+![](./Screenshot/youtube.png) https://www.youtube.com/watch?time_continue=158&v=9pY0uXc8CCM
 
 ## 架構
 ![](./image/slider/slider10.PNG)
